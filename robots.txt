@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://grcexp_zola1.com/sitemap.xml
+Sitemap: https://grc-experimental.github.io/sitemap.xml

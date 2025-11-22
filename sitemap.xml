@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://grcexp_zola1.com/</loc>
+        <loc>https://grc-experimental.github.io/</loc>
     </url>
     <url>
-        <loc>https://grcexp_zola1.com/blog/</loc>
+        <loc>https://grc-experimental.github.io/about/</loc>
     </url>
     <url>
-        <loc>https://grcexp_zola1.com/blog/first/</loc>
-        <lastmod>2019-11-27</lastmod>
+        <loc>https://grc-experimental.github.io/blog/</loc>
     </url>
     <url>
-        <loc>https://grcexp_zola1.com/blog/second/</loc>
-        <lastmod>2019-11-28</lastmod>
+        <loc>https://grc-experimental.github.io/logic-atp/</loc>
+    </url>
+    <url>
+        <loc>https://grc-experimental.github.io/notes/</loc>
     </url>
 </urlset>
