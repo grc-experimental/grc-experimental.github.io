@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>What is a proof? — </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://grc-experimental.github.io/css/style.css">
+</head>
+<body>
+    <main>
+        
+<div class="page page--article">
+  <article class="article">
+    <header class="article-header">
+      <h1 class="article-title">What is a proof?</h1>
+
+      
+      <p class="article-meta">
+        2025-11-26
+      </p>
+      
+
+      
+      <p class="article-description">
+        Working notes on what mathematicians mean by “proof”, and how formal systems and proof assistants fit into the picture.
+      </p>
+      
+
+      <a href="/blog/" class="return-button">← Back to Blog</a>
+    </header>
+
+    <section class="article-body">
+      <p>Mathematicians use the word <em>proof</em> in at least three different ways:</p>
+<ol>
+<li>As a social object: something you can present on a blackboard without getting laughed out of the room.</li>
+<li>As a formal object: a derivation in a fixed deductive system, ending in the statement you want.</li>
+<li>As a cognitive object: the mental story you tell yourself that makes a statement feel inevitable.</li>
+</ol>
+<p>In day–to–day work, we slide between these levels without announcing it. A good proof sketch in a seminar is
+often enough to convince everyone that a complete version is possible, even if nobody wants to see the
+fully expanded argument right then and there.</p>
+<hr />
+<h2 id="proofs-as-social-artefacts">Proofs as social artefacts</h2>
+<p>The first sense of “proof” is pragmatic: a proof is what convinces a suitably competent audience who
+are playing by the usual rules.</p>
+<p>Those rules are fuzzy but real:</p>
+<ul>
+<li>You are allowed to omit routine verifications.</li>
+<li>You are not allowed to skip the single nontrivial idea.</li>
+<li>You are supposed to be honest about where you are hand–waving.</li>
+</ul>
+<p>Textbooks and papers live in this regime. The details that are left out are precisely the ones that “any reader
+can fill in”. The point, of course, is that the set of “any readers” changes over time.</p>
+<hr />
+<h2 id="proofs-as-formal-objects">Proofs as formal objects</h2>
+<p>On the other hand, we also believe that proofs <em>could</em> be written in a way that leaves nothing to the reader.
+That is the formal view: fix a language, fix axioms, fix inference rules, and define a proof to be a finite
+sequence of formulas each of which is either an axiom or follows from previous ones by a rule.</p>
+<p>This level is where logicians live. It is also where proof assistants live: Lean, Coq, Isabelle, and friends
+accept only proofs that are explicit enough to be checked by a small kernel.</p>
+<p>Two quick observations:</p>
+<ul>
+<li>A formal proof is often much longer than the corresponding “paper proof”.</li>
+<li>The point is not to read these formal proofs like literature; the point is that they can be checked mechanically.</li>
+</ul>
+<p>If the formal system is sound, then a successful check is a strong guarantee: barring hardware or software bugs,
+the statement really does follow from the axioms.</p>
+<hr />
+<h2 id="proofs-as-mental-stories">Proofs as mental stories</h2>
+<p>Finally, there is the inner version: a proof is the way a statement slots into your mental model of a subject.</p>
+<p>Here you care about:</p>
+<ul>
+<li>which lemmas feel like they “ought to be true”,</li>
+<li>which definitions suddenly become natural after you see the theorem,</li>
+<li>how the argument interacts with examples already in your head.</li>
+</ul>
+<p>A perfectly correct formal derivation can be a bad proof in this sense: it shows that the statement is true,
+but does not tell you why it <em>had</em> to be true.</p>
+<p>This is the level where taste and style live, and where a lot of mathematical training actually happens.</p>
+<hr />
+<h2 id="where-proof-assistants-enter">Where proof assistants enter</h2>
+<p>Automated theorem proving and proof assistants sit at the border between the formal and the social:</p>
+<ul>
+<li>On one side, they require you to be explicit and precise enough for a machine.</li>
+<li>On the other side, a human still has to choose definitions, structure the argument, and decide what is really
+important.</li>
+</ul>
+<p>One working philosophy for this site is:</p>
+<blockquote>
+<p>If a proof is clear enough for a seminar room, then with some effort it should be clear enough for a proof assistant.</p>
+</blockquote>
+<p>This does <em>not</em> mean that every interesting theorem will soon have a short, pretty, fully formal proof. It means
+instead that there is a continuum: from rough heuristic ideas, through blackboard proofs, through careful
+write–ups, all the way to fully checked formalizations.</p>
+<hr />
+<h2 id="a-working-answer">A working answer</h2>
+<p>So, what is a proof?</p>
+<ul>
+<li>Socially: a proof is a public performance that convinces a mathematically competent audience.</li>
+<li>Formally: a proof is a finite derivation in a specified deductive system.</li>
+<li>Personally: a proof is the story that makes a statement feel inevitable in your own head.</li>
+</ul>
+<p>The rest of this blog will spend a lot of time moving between these three levels, and trying to push more
+of the first and third into the second—without losing what makes mathematics feel like mathematics.</p>
+
+    </section>
+  </article>
+</div>
+
+    </main>
+
+    
+</body>
+</html>
