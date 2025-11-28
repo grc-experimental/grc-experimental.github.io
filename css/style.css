@@ -628,3 +628,19 @@ main {
     transform: translateY(0px);
     box-shadow: none;
 }
+
+
+
+
+
+/* Hidden input for mobile keyboard capture */
+.terminal-hidden-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
