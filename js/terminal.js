@@ -24,7 +24,6 @@ const ASCII_BANNER = [
 
 const terminalOutput = document.getElementById("terminal-output");
 const terminalInput = document.getElementById("terminal-input");
-const terminalHiddenInput = document.getElementById("terminal-hidden-input");
 
 let currentInput = "";
 const history = [];
@@ -249,9 +248,6 @@ function handleKeyDown(event) {
     const input = currentInput;
     currentInput = "";
     updateInputDisplay();
-    if (typeof terminalHiddenInput !== "undefined" && terminalHiddenInput) {
-      terminalHiddenInput.value = "";
-    }
     handleCommand(input);
     event.preventDefault();
     return;
@@ -361,6 +357,7 @@ function initTerminal() {
 
   printLine("grc@⊢:~   —   foundations, logic, ATP", { className: "system" });
   printLine("Welcome to grc's terminal.", { className: "system" });
+  printLine("Site is optimized for desktop, and may NOT work on mobile.", { className: "system" });
   printLine(
     'UI largely inspired by <a href="https://terminal.jcubic.pl/" target="_blank" rel="noopener noreferrer">jQuery Terminal</a>.',
     { className: "system", asHtml: true }
@@ -369,29 +366,7 @@ function initTerminal() {
     className: "system"
   });
 
-
-  // Mobile: focus a hidden input so the soft keyboard appears,
-  // and route key events through it.
-  if (terminalHiddenInput) {
-    // Use hidden input as the single source of key events.
-    // This avoids double-handling on desktop when the input is focused.
-    terminalHiddenInput.addEventListener("keydown", handleKeyDown);
-
-    // Keep currentInput in sync with the hidden input value (helps on some mobile browsers).
-    terminalHiddenInput.addEventListener("input", () => {
-      currentInput = terminalHiddenInput.value;
-      updateInputDisplay();
-    });
-
-    const terminalBody = document.getElementById("terminal-body");
-    const focusTarget = terminalBody || document.getElementById("terminal");
-
-    if (focusTarget) {
-      focusTarget.addEventListener("click", () => {
-        terminalHiddenInput.focus();
-      });
-    }
-  }
+  window.addEventListener("keydown", handleKeyDown);
 }
 
 initTerminal();
