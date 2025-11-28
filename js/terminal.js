@@ -249,6 +249,9 @@ function handleKeyDown(event) {
     const input = currentInput;
     currentInput = "";
     updateInputDisplay();
+    if (typeof terminalHiddenInput !== "undefined" && terminalHiddenInput) {
+      terminalHiddenInput.value = "";
+    }
     handleCommand(input);
     event.preventDefault();
     return;
@@ -373,6 +376,12 @@ function initTerminal() {
     // Use hidden input as the single source of key events.
     // This avoids double-handling on desktop when the input is focused.
     terminalHiddenInput.addEventListener("keydown", handleKeyDown);
+
+    // Keep currentInput in sync with the hidden input value (helps on some mobile browsers).
+    terminalHiddenInput.addEventListener("input", () => {
+      currentInput = terminalHiddenInput.value;
+      updateInputDisplay();
+    });
 
     const terminalBody = document.getElementById("terminal-body");
     const focusTarget = terminalBody || document.getElementById("terminal");
