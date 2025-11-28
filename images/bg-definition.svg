@@ -1,0 +1,138 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="none"/>
+
+  <!-- ========================================================= -->
+  <!-- ICON COORDINATES (equal spacing, wider):                  -->
+  <!-- Logic:     x = 200                                        -->
+  <!-- Analysis:  x = 500                                        -->
+  <!-- Algebra:   x = 800                                        -->
+  <!-- Geometry:  x = 1100                                       -->
+  <!-- Topology:  x = 1400                                       -->
+  <!-- All centered vertically at y = 450.                       -->
+  <!-- ========================================================= -->
+
+  <!-- ======================= LOGIC (CYAN) ======================= -->
+  <g id="logic" transform="translate(200,450)">
+    <circle cx="0" cy="0" r="100" stroke="#00eaff" stroke-width="6" fill="none" opacity="0.98"/>
+    <text x="0" y="20" text-anchor="middle" font-size="60" font-family="serif" fill="#00eaff" opacity="0.98">ℵ</text>
+
+    <text x="-40" y="-40" text-anchor="middle" font-size="32" font-family="serif" fill="#00eaff" opacity="0.9">∀</text>
+    <text x="40"  y="-40" text-anchor="middle" font-size="34" font-family="serif" fill="#00eaff" opacity="0.9">⊧</text>
+    <text x="-35" y="55" text-anchor="middle" font-size="34" font-family="serif" fill="#00eaff" opacity="0.9">=</text>
+    <text x="35"  y="55" text-anchor="middle" font-size="32" font-family="serif" fill="#00eaff" opacity="0.9">∃</text>
+  </g>
+
+
+  <!-- ======================= ANALYSIS ======================= -->
+  <g id="analysis" transform="translate(500,468) scale(1.50)">
+    <line x1="-35" y1="0" x2="35" y2="0"
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="-8" x2="0" y2="8"
+          stroke="#ffffff" stroke-width="3"/>
+
+    <line x1="-15" y1="-10" x2="-15" y2="10"
+          stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="15"  y1="-10" x2="15"  y2="10"
+          stroke="#ffffff" stroke-width="2.5"/>
+
+    <text x="0" y="30"
+          text-anchor="middle"
+          font-size="22"
+          font-family="serif"
+          fill="#ffffff" opacity="0.95">δ</text>
+
+    <line x1="-30" y1="-40" x2="30" y2="-40"
+          stroke="#ffffff" stroke-width="3"/>
+    <line x1="-15" y1="-48" x2="-15" y2="-32"
+          stroke="#ffffff" stroke-width="2.5"/>
+    <line x1="15"  y1="-48" x2="15"  y2="-32"
+          stroke="#ffffff" stroke-width="2.5"/>
+
+    <text x="0" y="-55"
+          text-anchor="middle"
+          font-size="22"
+          font-family="serif"
+          fill="#ffffff" opacity="0.95">ε</text>
+  </g>
+
+
+
+
+  <!-- ======================= ALGEBRA ======================= -->
+  <g id="algebra" transform="translate(800,435)">
+    <polygon points="0,80 -52,50 -52,-10 0,-40 52,-10 52,50"
+            fill="none" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+
+    <g stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <line x1="0" y1="-40" x2="0" y2="80"/>
+      <line x1="0" y1="-40" x2="-52" y2="50"/>
+      <line x1="0" y1="-40" x2="52" y2="50"/>
+      <line x1="0" y1="80" x2="-52" y2="-10"/>
+      <line x1="0" y1="80" x2="52" y2="-10"/>
+      <line x1="-52" y1="50" x2="52" y2="-10"/>
+      <line x1="52" y1="50" x2="-52" y2="-10"/>
+    </g>
+  </g>
+
+
+
+  <!-- ======================= GEOMETRY ======================= -->
+  <g id="geometry" transform="translate(1100,450)">
+    <polygon points="-20,30 20,30 -20,-40"
+             fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round"/>
+
+    <polyline points="-20,20 -10,20 -10,30"
+              fill="none" stroke="#ffffff" stroke-width="3.2"/>
+
+    <polygon points="-20,30 20,30 20,70 -20,70"
+             fill="none" stroke="#ffffff" stroke-width="4"/>
+    <polygon points="-20,30 -20,-40 -90,-40 -90,30"
+             fill="none" stroke="#ffffff" stroke-width="4"/>
+
+    <!-- Hypotenuse square -->
+    <polygon points="-20,-40 20,30 90,-10 50,-80"
+             fill="none" stroke="#ffffff" stroke-width="4"/>
+  </g>
+
+
+  <!-- ======================= TOPOLOGY ======================= -->
+  <g id="topology" transform="translate(1400,450)">
+    <ellipse cx="0" cy="-40" rx="60" ry="22"
+             fill="none" stroke="#ffffff" stroke-width="4"/>
+
+    <ellipse cx="0" cy="-40" rx="48" ry="16"
+             fill="none" stroke="#ffffff" stroke-width="3"/>
+
+    <path d="M -60 -40 L -60 20
+             C -60 40, -40 55, 0 55
+             C 40 55, 60 40, 60 20
+             L 60 -40"
+          fill="none" stroke="#ffffff" stroke-width="4"/>
+
+    <path d="M -48 -34 L -48 10
+             C -48 25, -30 35, 0 35
+             C 30 35, 48 25, 48 10
+             L 48 -34"
+          fill="none" stroke="#ffffff" stroke-width="3"/>
+
+    <path d="M 60 -20
+             C 100 -20, 130 0, 130 30
+             C 130 60, 100 80, 60 40"
+          fill="none" stroke="#ffffff" stroke-width="4"/>
+
+    <path d="M 60 -10
+             C 95 -10, 110 5, 110 30
+             C 110 52, 95 65, 70 50
+             L 60 42"
+          fill="none" stroke="#ffffff" stroke-width="3"/>
+
+    <path d="M 60 40 L 60 -40"
+          fill="none" stroke="#ffffff" stroke-width="4"/>
+
+    <path d="M -15 -70 C -20 -80, -20 -90, -15 -100"
+          fill="none" stroke="#ffffff" stroke-width="2.5"/>
+    <path d="M 15 -70 C 10 -80, 10 -90, 15 -100"
+          fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  </g>
+
+</svg>
