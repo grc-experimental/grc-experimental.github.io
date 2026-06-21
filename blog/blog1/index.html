@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blog 1 — On Foundations of Mathematics — </title>
+    <title>Blog 1 — What is a Foundation? — </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://grc-experimental.github.io/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 </head>
 <body>
     <main>
@@ -12,7 +13,7 @@
 <div class="page page--article">
   <article class="article">
     <header class="article-header">
-      <h1 class="article-title">Blog 1 — On Foundations of Mathematics</h1>
+      <h1 class="article-title">Blog 1 — What is a Foundation?</h1>
 
       
       <p class="article-meta">
@@ -30,23 +31,30 @@
     </header>
 
     <section class="article-body">
-      <h1 id="on-foundations-of-mathematics">On Foundations of Mathematics</h1>
-<h2 id="i-a-concrete-discomfort-where-regress-quietly-appears">I. A Concrete Discomfort: Where Regress Quietly Appears</h2>
+      <p>Since Euclid, mathematicians have recognized the benefits of axiomatization. However, informal reasoning is still the engine behind deductions in Elements. Attempts to reign in inference rules and, more generally, to construct a foundation of mathematics was not pursued until more than two millinia later.</p>
+<p>Well, how is the program going? And, <strong>what is a foundation?</strong></p>
+<h2 id="i-informality-in-category-theory">I. Informality in Category Theory</h2>
+<p>We begin with the familiar definition of a category (excerpt from Steve Awodey, Category Theory 2nd ed., Definition 1.1)</p>
+<blockquote>
+<p>A <strong>category</strong> consists of the following data:</p>
 <ul>
-<li>Begin with a familiar definition (e.g. <em>structure</em>, <em>model</em>, or <em>category</em>).</li>
-<li>Observe the use of terms like:
+<li>Objects: $A,B,C,\dots$</li>
+<li>Arrows: $f,g,h,\dots$</li>
+<li>For each arrow $f$, there are given objects $$dom(f), \quad cod(f)$$ called the <em>domain</em> and <em>codomain</em> of $f$. We write $$f:A \to B$$ to indicate that $A = dom(f)$ and $B = cod(f)$</li>
+<li>Given arrows $f:A \to B$ and $g:B \to C$, that is, with $$cod(f) = dom(g)$$ there is given an arrow $$g \circ f : A \to C$$ called the <em>composite</em> of $f$ and $g$.</li>
+<li>For each object $A$, there is given an arrow $$1_A : A \to A$$ called the <em>identity arrow</em> of $A$.</li>
+</ul>
+<p>These data are required to satisfy the following laws:</p>
 <ul>
-<li>“collection”</li>
-<li>“consists of”</li>
-<li>“object”</li>
-<li>“map”</li>
+<li>Associativity: $$h \circ (g \circ f) = (h \circ g) \circ f$$ for all $f : A \to B, g : B \to C, h : C \to D$</li>
+<li>Unit: $$f \circ 1_A = f = 1_B \circ f$$ for all $f : A \to B$.</li>
 </ul>
-</li>
-<li>Note that these terms are not defined within the theory being discussed.</li>
-<li>Emphasize that mathematics proceeds smoothly anyway.</li>
-<li>Do <strong>not</strong> yet name the regress; let it be felt.</li>
-</ul>
-<hr />
+</blockquote>
+<p>All those in room nod, until the harmony is broached by a question:</p>
+<blockquote>
+<p>What is "data"?</p>
+</blockquote>
+<p>Indeed, what is it? A set? A proper class? A tuple of sets? A tuple of classes? Reading ahead, the answer seems to be: all of these, depending on context. Categories of sets, groups, vector spaces, small categories, large categories—each instantiates the definition differently.</p>
 <h2 id="ii-what-a-foundation-actually-is">II. What a Foundation Actually Is</h2>
 <ul>
 <li>Introduce the notion of a <em>foundation</em> explicitly.</li>
@@ -66,7 +74,6 @@
 </li>
 <li>Stress that foundations organize mathematics; they do not justify reasoning from nothing.</li>
 </ul>
-<hr />
 <h2 id="iii-meta-theory-and-disciplined-informal-deduction">III. Meta-Theory and Disciplined Informal Deduction</h2>
 <ul>
 <li>Clarify what “informal” means:
@@ -177,5 +184,20 @@ and how they live inside a background foundation (typically ZFC).</li>
     </main>
 
     
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$",  right: "$",  display: false }
+        ],
+        throwOnError: false
+        });
+    });
+    </script>
+
 </body>
 </html>

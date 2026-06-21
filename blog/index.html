@@ -5,6 +5,7 @@
     <title>Blog — </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://grc-experimental.github.io/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 </head>
 <body>
     <main>
@@ -25,7 +26,7 @@
         
         <li class="blog-list-item">
           <a href="https://grc-experimental.github.io/blog/blog1/" class="blog-list-link">
-            <h2 class="blog-post-title">Blog 1 — On Foundations of Mathematics</h2>
+            <h2 class="blog-post-title">Blog 1 — What is a Foundation?</h2>
             <p class="blog-post-meta">
               2026-01-11
             </p>
@@ -55,5 +56,20 @@
     </main>
 
     
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$",  right: "$",  display: false }
+        ],
+        throwOnError: false
+        });
+    });
+    </script>
+
 </body>
 </html>
